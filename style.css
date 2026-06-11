@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:black;
+    overflow-x:hidden;
+}
+
+/* PANTALLAS */
+
+.pantalla{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:5%;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.8)
+    ),
+
+    url("https://i.pinimg.com/736x/0f/fb/3c/0ffb3c1c204860455669bb65ea0eda84.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+}
+
+.pantalla h1{
+
+    font-size:7vw;
+
+    margin-bottom:5%;
+
+    animation: aparecer 2s ease;
+}
+
+button{
+
+    padding:4% 8%;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:red;
+
+    color:white;
+
+    font-size:4vw;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:scale(1.1);
+
+    background:#ff3b3b;
+}
+
+.oculto{
+    display:none;
+}
+
+/* INVITACION */
+
+#invitacion{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:5%;
+
+    background:
+    linear-gradient(#001d3d,#000814);
+}
+
+.tarjeta{
+
+    width:90%;
+    max-width:700px;
+
+    background:rgba(255,255,255,0.08);
+
+    padding:8%;
+
+    border-radius:5%;
+
+    border:0.3vw solid red;
+
+    text-align:center;
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    animation: subir 1.5s ease;
+}
+
+.spiderman{
+
+    font-size:15vw;
+
+    animation: balanceo 3s infinite;
+}
+
+.tarjeta h1{
+
+    font-size:8vw;
+
+    margin-top:3%;
+}
+
+.tarjeta p{
+
+    margin-top:3%;
+
+    font-size:4vw;
+}
+
+.info{
+
+    margin-top:6%;
+}
+
+.mapa{
+
+    margin-top:7%;
+}
+
+iframe{
+
+    width:100%;
+
+    height:40vh;
+
+    border:none;
+
+    border-radius:20px;
+}
+
+/* ANIMACIONES */
+
+@keyframes balanceo{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10%);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes subir{
+
+    from{
+        transform:translateY(20%);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* COMPUTADORA */
+
+@media(min-width:768px){
+
+    .pantalla h1{
+        font-size:3vw;
+    }
+
+    button{
+        font-size:1.3vw;
+        padding:1.5% 4%;
+    }
+.spiderman{
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-top: 5%;
+}
+
+.spiderman img{
+
+    width: 120px;
+
+    height: auto;
+
+    animation: balanceo 3s infinite;
+
+    filter: drop-shadow(0 0 20px red);
+}
+.spiderman::before{
+
+    content: "";
+
+    width: 0.5vw;
+
+    height: 15vh;
+
+    background: white;
+
+    position: absolute;
+
+    top: -15vh;
+
+    left: 50%;
+}
+    .tarjeta h1{
+        font-size:4vw;
+    }
+
+    .tarjeta p{
+        font-size:1.5vw;
+    }
+}
